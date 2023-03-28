@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --darkblue: hsl(217, 54%, 11%);
+  --darkblue2: hsl(216, 50%, 16%);
+  --darkblue3: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  background: var(--darkblue);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+
+/*Mobile Styles*/
+main {
+  min-height: 100vh;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.nft-bg {
+  width: 90%;
+  height: auto;
+  padding: 20px;
+  background: var(--darkblue2);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-evenly;
+  font-family: Outfit, sans-serif;
+}
+.nft-img {
+  background-image: url("https://github.com/hannyfish/hanny_nftpreview/blob/main/image-equilibrium.jpg?raw=true");
+  background-size: cover;
+  object-fit: scale-down;
+  border-radius: 15px;
+  height: 300px;
+}
+.nft-img:hover {
+  filter: opacity(0.8) drop-shadow(0 0 0 hsl(180, 100%, 50%));
+  content: url(https://raw.githubusercontent.com/hannyfish/hanny_nftpreview/d0f99cd695c982bd3f368d7d9514d87bc0f9e014/icon-view.svg);
+}
+
+.nft-title {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--white);
+  margin: 10px;
+  text-decoration: none;
+}
+.nft-title:hover {
+  color: cyan;
+}
+
+.nft-summary {
+  font-weight: 300;
+  color: hsla(0, 0%, 100%, 70%);
+  font-size: 16px;
+  margin: 10px;
+}
+.nft-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 20px;
+  margin-bottom: 10px;
+}
+.nft-info h2 {
+  color: cyan;
+  font-size: 14px;
+}
+.nft-info h2:before {
+  content: url(https://raw.githubusercontent.com/hannyfish/hanny_nftpreview/d0f99cd695c982bd3f368d7d9514d87bc0f9e014/icon-ethereum.svg);
+  padding-right: 5px;
+}
+.nft-info h3 {
+  color: var(--darkblue3);
+  font-size: 14px;
+  font-weight: 400;
+}
+.nft-info h3:before {
+  content: url(https://raw.githubusercontent.com/hannyfish/hanny_nftpreview/d0f99cd695c982bd3f368d7d9514d87bc0f9e014/icon-clock.svg);
+  padding-right: 5px;
+}
+
+.nft-line {
+  height: 1px;
+  background: var(--darkblue3);
+  width: 100%;
+}
+
+.nft-name {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  color: hsla(0, 0%, 100%, 85%);
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+.nft-name a {
+  color: var(--white);
+  text-decoration: none;
+}
+.nft-name a:hover {
+  color: cyan;
+}
+
+.nft-av {
+  background-image: url(https://github.com/hannyfish/hanny_nftpreview/blob/main/image-avatar.png?raw=true);
+  border-radius: 50px;
+  border: 1px solid var(--white);
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  margin-right: 5px;
+}
+
+/*Desktop Styles*/
+@media screen and (min-width: 900px) {
+  main {
+    min-width: 950px;
+    min-height: 50vh;
+    display: grid;
+    place-content: center;
+  }
+  
+  .nft-bg {width: 15em;}
+  .nft-img {height: 250px;}
+}
